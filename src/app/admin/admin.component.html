@@ -1,0 +1,55 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+<div style="padding:16px">
+    <div style="display: flex;">
+        <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Advance Pie Chart</mat-card-title>
+            </mat-card-header>
+            <ngx-charts-pie-grid 
+            [results]="saleData" >
+          </ngx-charts-pie-grid>
+        </mat-card>
+        <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Pie Chart</mat-card-title>
+            </mat-card-header>
+            <ngx-charts-pie-chart 
+              [results]="saleData"
+              [legend]="true"
+              [legendTitle]="'Product Sale Report'" 
+              [view]="[400,200]"
+              [labels]="true" >
+          </ngx-charts-pie-chart>
+        </mat-card>
+        <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Line Chart</mat-card-title>
+            </mat-card-header>
+            <ngx-charts-bar-vertical 
+              [view]="[400,200]"
+              [results]="saleData"
+              [xAxisLabel]="'Products'"
+              [legendTitle]="'Product Sale Chart'"
+              [yAxisLabel]="'Sale'"
+              [legend]="true"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true"
+              [xAxis]="true"
+              [yAxis]="true"
+              [gradient]="true">
+          </ngx-charts-bar-vertical>
+        </mat-card>
+    </div>
+</div>

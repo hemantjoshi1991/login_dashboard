@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .card {
+    width: 29%;
+    margin: 4px;
+  }

@@ -1,0 +1,35 @@
+
+<div class="form-Align">
+    <div [formGroup]="regisForm" class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="Name"
+                   placeholder="Ex. pat@example.com">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="Email"
+                   placeholder="Ex. pat@example.com">
+            <!-- <mat-error *ngIf="Email.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password"
+                   placeholder="Ex. pat@example.com">
+            <!-- <mat-error *ngIf="Email.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Mobile</mat-label>
+            <input type="number" matInput formControlName="Mobile"
+                   placeholder="Ex. pat@example.com">
+            <!-- <mat-error *ngIf="Email.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+          <button mat-raised-button color="primary" [disabled]="!regisForm.valid" (click)="onRegisForm()">Submit</button>
+        </div>
+</div>
